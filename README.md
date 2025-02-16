@@ -1,8 +1,8 @@
 # 🧠 Brain Tumor Classification : AI That Sees What You Can’t 🔍  
 ---
-Because staring at MRI scans for hours is so last century,  
-my Brain Tumor Detection Model does the job faster, smarter, and without needing ☕ coffee breaks. 
-Powered by Deep Learning 🤖, this AI doesn’t just analyze scans—it judges them, spotting tumors with an attitude that says,  
+Because staring at MRI scans for hours is so last century, my Brain Tumor Detection Model does the job faster, smarter, and without needing ☕ coffee breaks.  
+Powered by Deep Learning 🤖,  
+this AI doesn’t just analyze scans—it judges them, spotting tumors with an attitude that says,  
 "Oh, you didn’t see that? Rookie move." 😏
 
 ---

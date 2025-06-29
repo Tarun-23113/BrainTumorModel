@@ -1,4 +1,0 @@
-torch
-torchvision
-streamlit
-kaggle dataset from readme

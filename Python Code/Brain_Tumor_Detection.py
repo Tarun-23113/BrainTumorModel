@@ -87,7 +87,6 @@ if uploaded_file:
         st.markdown("<h3 style='color: #FF5722;'>Classifying...</h3>", unsafe_allow_html=True)
         prediction = predict(Image.open(uploaded_file).convert("RGB"))
         st.success(f"Prediction: **{prediction}**")
-        st.snow()
 
 #Evaluation Metrices
 st.markdown("<h2 style='text-align: center; color: #2196F3;'>Evaluation Metrics</h2>", unsafe_allow_html=True)

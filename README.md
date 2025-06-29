@@ -2,7 +2,7 @@
 
 ---
 
-👩‍⚕️ Doctors spend hours analyzing MRI scans, but my AI model powered by **VGG16 CNN** spots tumors **faster and smarter** — no coffee breaks needed! ☕🚫
+👩‍⚕️ Doctors spend hours analyzing MRI scans, but this Deep Learning model powered by **VGG16 CNN** spots tumors **faster and smarter** — no coffee breaks needed! ☕🚫
 
 ---
 
@@ -65,4 +65,4 @@ Explore the full model details, training process, and results in my [Colab Noteb
 
 ---
 
-*Thanks for stopping by! Feel free to reach out if you want to chat about AI or data science.* 😊
+*Thanks for stopping by!* 😊

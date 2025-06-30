@@ -2,3 +2,10 @@ torch
 torchvision
 streamlit
 kaggle dataset from readme
+streamlit
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+opencv-python-headless

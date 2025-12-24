@@ -1,68 +1,103 @@
-# 𝗕𝗿𝗮𝗶𝗻 𝗧𝘂𝗺𝗼𝗿 Detection 🔍
+# 🧠 Brain Tumor Detection Using Deep Learning
+
+This project presents an **end-to-end deep learning system** for brain tumor classification from MRI scans.  
+The goal is to explore how a CNN-based approach can **assist medical image analysis** by learning tumor-related patterns, while being evaluated using **medical-relevant metrics rather than accuracy alone**.
+
+The work was developed as a group project and later formalized into a **published research paper**.
 
 ---
 
-👩‍⚕️ Doctors spend hours analyzing MRI scans, but this Deep Learning model inspired by **VGG16 CNN Architecture** spots tumors **faster and smarter**
+## 🎯 Problem Overview
+
+Brain tumor diagnosis using MRI scans is time-consuming and requires expert interpretation.  
+With large volumes of scans and limited radiology resources in many regions, automated **decision-support systems** can help improve efficiency and consistency.
+
+This project focuses on:
+- Multi-class brain tumor classification from MRI images  
+- Reliable evaluation beyond accuracy  
+- A complete pipeline from training to deployment  
+
+> ⚠️ This system is a **research and decision-support prototype**, not a clinical diagnostic tool.
 
 ---
 
-## 🔎 Key Features
+## 📂 Dataset
 
-- **🎯 CNN-Powered Precision:** Accurate multi-class tumor detection  
-- **🤖 Automated Analysis:** No manual magnifying glass analysis required  
-- **⚡ Optimized Accuracy:** Near expert-level results  
-- **⏱️ Efficiency:** Faster than manual diagnosis  
-
----
-
-## 📂 Dataset & Preprocessing
-
-- Dataset from [Kaggle Brain Tumor MRI Images (17 classes)](https://www.kaggle.com/datasets/fernando2rad/brain-tumor-mri-images-17-classes)  
-- Anonymized MRI scans, labeled by radiologists  
-- Minimal preprocessing; data augmentation (rotations, flips, etc.) for robustness  
+- **Source:** Brain Tumor MRI Images (17 classes) – Kaggle  
+- **Data:** Real, anonymized MRI scans labeled by radiologists  
+- **Modalities:** T1, T1C+, T2  
+- **Classes:** Multiple tumor types + normal scans  
 
 ---
 
-## 🏗️ Model Architecture & Training
+## 🏗️ Methodology
 
-- Based on **VGG16** with added **Batch Normalization** for stability and faster training  
-- **Loss function:** CrossEntropyLoss (for multi-class classification)  
-- **Optimizer:** Adam (lr=0.001, weight_decay=1e-4)  
-- Fine-tuning and extended epochs to boost accuracy  
+### Data Preparation
+- Clean **train / validation / test split** to avoid data leakage  
+- **Training-only data augmentation** (flips, rotations, intensity changes)  
+- Validation and test sets kept untouched  
 
----
+### Model
+- **VGG16-inspired CNN**, trained from scratch  
+- Batch Normalization and Dropout for stability and generalization  
+- Designed to learn **MRI-specific features**
 
-## 📊 Evaluation Metrics
-
-| Metric             | Purpose                                        |
-|--------------------|------------------------------------------------|
-| **Accuracy**       | Overall prediction correctness                 |
-| **Specificity**    | Correctly identifying non-tumor cases          |
-| **F1 Score**       | Balance between precision and recall            |
-| **Confusion Matrix**| Visualizing true vs false positives/negatives |
-| **Calibration Curve**| Model confidence calibration                   |
-| **SSIM**           | Preserving structural similarity in images     |
+### Training
+- Loss: CrossEntropyLoss  
+- Optimizer: Adam with weight decay  
+- GPU-accelerated training (Google Colab)  
+- **Early stopping and model selection based on validation F1-score**
 
 ---
 
-## 💡 Strengths & Weaknesses
+## 📊 Evaluation
 
-**Strengths:**  
-- 🎯 Training accuracy: **95.06%** — excellent learning  
-- 💪 Strong F1 scores (>0.90) for most classes  
-- 🌟 Good generalization across tumor types  
+Instead of relying only on accuracy, the model is evaluated using:
+- **Macro & per-class F1-score**
+- **Specificity**
+- **Confusion matrix**
+- **Calibration curve**
 
-**Weaknesses:**  
-- ⚠️ Test accuracy dips to **86.46%** — some overfitting  
-- 🚧 Lower performance on underrepresented classes  
-- 🔍 Challenges in generalizing certain tumor classes  
+These metrics provide a clearer picture of **class-wise reliability and confidence**, which is critical in medical applications.
 
 ---
 
-## 🚀 Dive Deeper
+## 🚀 Deployment
 
-Explore the full model details, training process, and results in my [Colab Notebook](https://colab.research.google.com/drive/1_RybqqdYU0vu34HJC6fGXTkbgAK9soUh?usp=sharing)  
+- Best-performing model saved with:
+  - Model weights
+  - Class label mapping
+  - Preprocessing configuration  
+- Deployed using **Streamlit** for inference-only usage  
+- Ensures preprocessing consistency between training and deployment  
 
 ---
 
-*Thanks for stopping by!* 😊
+## 📄 Research Publication
+
+The experimental results, methodology, and evaluation were formalized into a research paper and published at **INCOFT 2025**.  
+The contribution focuses on **applied deep learning**, medical-aware evaluation, and reproducibility rather than architectural novelty.
+
+---
+
+## 🔍 Limitations & Future Work
+
+- Class imbalance affects some rare tumor categories  
+- Single-source dataset without external validation  
+- No explainability methods (e.g., Grad-CAM) yet  
+
+Future improvements include multi-center validation, explainability, and better imbalance handling.
+
+---
+
+## 👤 Contribution
+
+My primary contribution focused on:
+- Data preparation and augmentation strategy  
+- CNN architecture design for improved generalization  
+- Selection and analysis of healthcare-relevant evaluation metrics  
+- Deployment of the trained model for inference
+
+---
+
+This project demonstrates a **practical and responsible application of deep learning in medical imaging**, with emphasis on evaluation, transparency, and real-world constraints.

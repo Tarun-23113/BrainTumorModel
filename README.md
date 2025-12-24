@@ -1,15 +1,15 @@
-# 𝗕𝗿𝗮𝗶𝗻 𝗧𝘂𝗺𝗼𝗿 𝗖𝗹𝗮𝘀𝘀𝗶𝗳𝗶𝗰𝗮𝘁𝗶𝗼𝗻: AI That Sees What You Can’t 🔍
+# 𝗕𝗿𝗮𝗶𝗻 𝗧𝘂𝗺𝗼𝗿 Detection 🔍
 
 ---
 
-👩‍⚕️ Doctors spend hours analyzing MRI scans, but this Deep Learning model powered by **VGG16 CNN** spots tumors **faster and smarter** — no coffee breaks needed! ☕🚫
+👩‍⚕️ Doctors spend hours analyzing MRI scans, but this Deep Learning model inspired by **VGG16 CNN Architecture** spots tumors **faster and smarter**
 
 ---
 
 ## 🔎 Key Features
 
 - **🎯 CNN-Powered Precision:** Accurate multi-class tumor detection  
-- **🤖 Automated Analysis:** No magnifying glass required  
+- **🤖 Automated Analysis:** No manual magnifying glass analysis required  
 - **⚡ Optimized Accuracy:** Near expert-level results  
 - **⏱️ Efficiency:** Faster than manual diagnosis  
 
